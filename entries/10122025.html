@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>10-12-2025 Dies Academicus</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav>
+    <a href="../index.html">Home</a> |
+    <a href="../entries.html">Journal Entries</a> |
+    <a href="../about.html">About Me</a>
+</nav>
+<hr>
+
+<div class="container">
+
+    <!-- 2-column layout -->
+    <div class="layout">
+
+        <!-- MAIN JOURNAL CONTENT -->
+        <div class="main entry">
+            <h1>10-12-2025 – Dies Academicus</h1>
+
+            <p>Last night I slept late around 2am, so I woke up little later than usual. But the Atomistic Simulation methods exercise was at 9:45am. So I had to rush without even brushing my teeth. After the exercise I went to Kaufland to buy some groceries and from there I bought a lot of chicken.</p>
+
+            <h2>Aluminium nanowire structure simulation</h2>
+            <p>In the afternoon when I was working on the Al nanowire, I found the actual problem that was bothering me for so many days. And the important step in solving a problem is understanding the problem. First I fixed the structure generation issue, then the Al main block structure was periodic in all directions. Then we had to cut or shape the rectangular block like a hexagonal nanowire using awk which worked without any issue.</p>
+
+            <p>The next step was to relax the microstructure so that there are no residual forces. It usually means to minimize the total potential energy so that the particles arrange themselves. The relaxed structure now has to go through thermal equilibrium. For now I haven't gone through what the thermal equilibration file does or the method but I will do it definitely after I prepare the .ldata file for the simulation.</p>
+
+            <p>In the relaxed .ldata file the atoms are going outside the simulation box so when I ran the simulation it says the atoms are not numbered properly. This is happening because the atoms outside the sim box are not considered. So, now I have to figure out a way to tackle this.</p>
+
+            <h2>Plasticity</h2>
+            <p>I didn't study a lot of plasticity today. However I successfully made a study plan till next Tuesday. The mid-term exam is on the next Wednesday so I have to study a lot from tomorrow. I did the exercise 3 a little bit – only the tensor numericals.</p>
+        </div>
+        </div>
+</div>
+
+        <!-- SIDEBAR -->
+        <div class="layout">
+        <aside class="sidebar-box">
+            <h2>📚 Deutsch Vocab</h2>
+            <div class="vocab">
+                <ul>
+                    <li><strong>Glesichfalls</strong> — same to you</li>
+                    <li><strong>Schön</strong> — beautiful</li>
+                    <li><strong>Verstehen</strong> — to understand</li>
+                </ul>
+            </div>
+        </aside>
+
+    </div> <!-- end .layout -->
+
+
+</body>
+</html>
+

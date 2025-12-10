@@ -23,7 +23,7 @@ nav a:hover {
     color: #ffd700;
 }
 
-/* Page container */
+/* Page container for index, entries list, etc. */
 .container {
     max-width: 800px;
     margin: auto;
@@ -36,6 +36,7 @@ h1, h2 {
     font-family: "Georgia", serif;
 }
 
+/* Entry cards (for entries list, not the single page layout) */
 .entry {
     background: white;
     padding: 20px;
@@ -57,6 +58,7 @@ h1, h2 {
 .entry p {
     line-height: 1.6;
 }
+
 .entry a {
     text-decoration: none;
     color: #0077cc;
@@ -65,35 +67,60 @@ h1, h2 {
 .entry a:hover {
     text-decoration: underline;
 }
+
 p {
     font-size: 1.05em;
     line-height: 1.7;
 }
 
-.layout {
+/* ---- NEW LAYOUT FOR SINGLE ENTRY PAGE ---- */
+
+/* Full-page layout: centered content + right sidebar */
+.page-layout {
     display: flex;
-    gap: 20px;
+    justify-content: center;   /* center main content block */
+    gap: 40px;                 /* space between main and sidebar */
+    width: 100%;
+    padding: 20px;
 }
 
-.main {
-    flex: 3;
+/* Centered main content area */
+.main-content {
+    flex: 0 0 700px;   /* fixed width -> stays nicely centered */
 }
 
+/* The main entry box */
+.entry-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Sidebar box on the extreme right */
 .sidebar-box {
-    position: absolute;
-    right: 40px;            /* push to extreme right */
-    top: 140px;             /* place below navbar */
-    width: 250px;
-
+    flex: 0 0 250px;                 /* fixed width */
     background: #fffce6;
     padding: 20px;
     border-left: 5px solid #ffcc00;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 
+    position: sticky;
+    top: 20px;                       /* stays visible while scrolling */
     height: fit-content;
 }
 
-
 .sidebar-box h2 {
     margin-top: 0;
+}
+
+.sidebar-box ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.sidebar-box li {
+    margin-bottom: 8px;
+}
+
